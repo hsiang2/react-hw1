@@ -1,18 +1,20 @@
-import ImageItem from "./ImageItem"
+import ImageItem from "../ImageItem"
+import styles from "./imageList.module.css"
+import { Row } from "antd"
 
 const ImagesList = ({ images }) => {
     return (
-        <article className="image__layout py-3 py-sm-5">
+        <div className={styles.imageLayout}>
             <div className="container">
-                <h1 className="text-center">IMAGES</h1>
+                <h1>IMAGES</h1>
                 <hr className="divider--dark" />
-                <div className="row">
+                <Row  gutter={[24, 0]} className={styles.imageRow}>
                     {images.map( image => 
                         <ImageItem image={image} />
                     )}
-                </div>
+                </Row>
             </div>
-        </article>
+        </div>
     )
 }
 

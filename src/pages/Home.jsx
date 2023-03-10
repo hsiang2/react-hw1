@@ -1,16 +1,18 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import ImagesList from '../components/ImagesList'
+import ImageList from '../components/ImageList'
 import Descriptions from '../components/Descriptions'
 import images from '../json/images.json'
 
 const Home = () => {
     return (
-        <div>
-            <Header />
-            <ImagesList images={images}/>
-            <Descriptions />
-            <Footer />
+        <div className="mainLayout">
+            <Header className="layoutHeader" />
+            <div className='layoutContent'>
+                <ImageList images={images}/>
+                <Descriptions />
+            </div>
+            <Footer className="layoutFooter"/>
         </div>
     )
 }
