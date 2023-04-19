@@ -10,7 +10,7 @@ const ImagesList = ({ images }) => {
                 <hr className="divider--dark" />
                 <Row  gutter={[24, 0]} className={styles.imageRow}>
                     {images.map( image => 
-                        <ImageItem image={image} />
+                        <ImageItem image={image} key={image.title} />
                     )}
                 </Row>
             </div>
